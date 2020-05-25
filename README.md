@@ -39,9 +39,10 @@ Everytime you run `sync`, this record will be updated on CloudFlare with your cu
 php console.php add NAME DOMAIN
 ```
 
-To remove specific subdomain/domain from the processing queue
 
 ### Remove record
+
+If you no longer wish specific record to be updated, you can remove it from the processing queue.
 
 ```
 php console.php remove NAME DOMAIN
@@ -49,15 +50,19 @@ php console.php remove NAME DOMAIN
 
 ### Sync records
 
+The sync command will loop through the records you added and update those via the CloudFlare API with your system's current IP addresss.
+
 ```
 php console.php sync
 ```
 
 ## Automation
 
-The app makes sense if automated. For example you will want to keep your DNS records updated with your current dynamic IP.
+The app makes sense if it is automated. 
 
-The easiest thing to keep your records up to date is to run cron in combination with the `sync` command on every 10-15 minutes.
+For example, you will want to keep your DNS records updated with your current dynamic IP and that's possible!
+
+The easiest way to achieve this is to run the `sync` command on every 10-15 minutes using cron.
 
 Sync every 10 munutes example:
 
