@@ -2,13 +2,13 @@
 
 The purpose of this application is to make it easy to update your dns zone hosted on CloudFlare with your public IP. The application supports unlimited domains / subdomains.
 
-Extremely useful in case you have a public dynamic ip address and want to keep your dns records in sync with your ip address changes.
+Extremely useful in case you have a public dynamic ip address and want to keep your dns records in sync with your ip address.
 
 ## Requirements
 
 * Linux
 * PHP 7.1+
-* CloudFlare api key
+* CloudFlare API Key
 * Composer
 
 ## Installation
@@ -21,31 +21,39 @@ composer install
 
 ## Configuration
 
-`php console.php login EMAIL API_KEY`
+```
+php console.php login EMAIL API_KE
+```
 
 ### Add record
 
-The following command will add subdomain NAME.DOMAIN to the processing queue. 
+The following command will add subdomain `NAME.DOMAIN` to the processing queue. 
 
 Everytime you run `sync`, this record will be updated on CloudFlare with your current IP.
 
-`php console.php add NAME DOMAIN`
+```
+php console.php add NAME DOMAIN
+```
 
 To remove specific subdomain/domain from the processing queue
 
 ### Remove record
 
-`php console.php remove NAME DOMAIN`
+```
+php console.php remove NAME DOMAIN
+```
 
 ### Sync records
 
-`php console.php sync`
+```
+php console.php sync
+```
 
 ## Automation
 
-The app makes sense if properly automated. For example if i want the subdomain to be updated in case my ip changes. 
+The app makes sense if automated. For example you will want to keep your DNS records updated with your current dynamic IP.
 
-The easiest thing to keep your subdomains up to date is to run cron with the `sync` command on 10-15 minutes interval.
+The easiest thing to keep your records up to date is to run cron in combination with the `sync` command on every 10-15 minutes.
 
 Sync every 10 munutes example:
 
