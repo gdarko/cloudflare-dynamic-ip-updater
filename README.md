@@ -77,7 +77,7 @@ Contributions are welcome! Feel free to submit your pull request.
 ## License
 
 ```
-Copyright (C) 2020 Darko Gjorgjijoski (https://megaoptim.com)
+Copyright (C) 2020 Darko Gjorgjijoski (https://darkog.com)
 
 This file is part of CloudFlare Dynamic IP Updater
 
