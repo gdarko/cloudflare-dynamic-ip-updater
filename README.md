@@ -13,21 +13,27 @@ Extremely useful in case you have a public dynamic ip address and want to keep y
 
 ## Installation
 
-`git clone repo`
-
-`cd repo`
-
-`composer install`
+```
+git clone https://github.com/gdarko/cloudflare-dynamic-ip-updater.git
+cd cloudflare-dynamic-ip-updater
+composer install
+```
 
 ## Configuration
 
 `php console.php login EMAIL API_KEY`
 
-#### Add record in domain zone
+#### Add record
+
+The following command you will add subdomain NAME.DOMAIN to the processing queue. 
+
+Everytime you run `sync`, this record will be updated on CloudFlare with your current IP.
 
 `php console.php add NAME DOMAIN`
 
-#### Remove record from domain zone
+To remove specific subdomain/domain from the processing queue
+
+#### Remove record
 
 `php console.php remove NAME DOMAIN`
 
@@ -41,6 +47,11 @@ The app makes sense if properly automated. For example if i want the subdomain t
 
 The easiest thing to keep your subdomains up to date is to run cron with the `sync` command on 10-15 minutes interval.
 
+Sync every 10 munutes example:
+
+```
+*/10 * * * * cd /path/to/cloudflare-dynamic-ip-updater && php console.php sync > /dev/null 2>&1
+```
 
 ## Contribution
 
