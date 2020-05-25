@@ -1,5 +1,5 @@
 {
-  "name": "gdarko/cloudflare-dyndns-updater",
+  "name": "gdarko/cloudflare-dynamic-ip-updater",
   "description": "Used to update cloudflare records and sync your current ip with your domain name.",
   "require": {
     "cloudflare/sdk": "^1.1",
