@@ -22,7 +22,7 @@ composer install
 ## Configuration
 
 ```
-php console.php login EMAIL API_KE
+php console.php login EMAIL API_KEY
 ```
 
 ### Add record
