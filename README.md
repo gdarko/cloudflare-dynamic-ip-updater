@@ -23,9 +23,9 @@ composer install
 
 `php console.php login EMAIL API_KEY`
 
-#### Add record
+### Add record
 
-The following command you will add subdomain NAME.DOMAIN to the processing queue. 
+The following command will add subdomain NAME.DOMAIN to the processing queue. 
 
 Everytime you run `sync`, this record will be updated on CloudFlare with your current IP.
 
@@ -33,11 +33,11 @@ Everytime you run `sync`, this record will be updated on CloudFlare with your cu
 
 To remove specific subdomain/domain from the processing queue
 
-#### Remove record
+### Remove record
 
 `php console.php remove NAME DOMAIN`
 
-#### To update with your ip
+### Sync records
 
 `php console.php sync`
 
