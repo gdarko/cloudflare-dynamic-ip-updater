@@ -21,6 +21,10 @@ composer install
 
 ## Configuration
 
+### Authentication
+
+The login credentails are stored in storage/.data and used when needed.
+
 ```
 php console.php login EMAIL API_KEY
 ```
@@ -72,7 +76,7 @@ Copyright (C) 2020 Darko Gjorgjijoski (https://megaoptim.com)
 
 This file is part of CloudFlare Dynamic IP Updater
 
-MegaOptim Image Optimizer is free software: you can redistribute it and/or modify
+CloudFlare Dynamic IP Updater is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
 (at your option) any later version.
