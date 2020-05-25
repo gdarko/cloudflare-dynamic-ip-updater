@@ -50,7 +50,7 @@ php console.php remove NAME DOMAIN
 
 ### Sync records
 
-The sync command will loop through the records you added and update those via the CloudFlare API with your system's current IP addresss.
+The sync command loops through the records you added and updates those in CloudFlare with your system's current IP.
 
 ```
 php console.php sync
@@ -60,7 +60,7 @@ php console.php sync
 
 The app makes sense if it is automated. 
 
-For example, you will want to keep your DNS records updated with your current dynamic IP and that's possible!
+For example, you will want to keep your DNS records updated with your current IP and that's possible!
 
 The easiest way to achieve this is to run the `sync` command on every 10-15 minutes using cron.
 
